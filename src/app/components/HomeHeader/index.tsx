@@ -1,3 +1,4 @@
+import { View ,Text} from "react-native"
 import {  LinearGradient } from "expo-linear-gradient"
 
 import { styles } from "./styles"
@@ -9,6 +10,14 @@ export function HomeHeader(){
         <LinearGradient 
             colors={[colors.blue[500], colors.blue[800]]}
             style={styles.container}
-            />
+            >
+                <View>
+                    <Text          
+                        style={styles.label}
+                    >
+                        Home
+                    </Text>
+                </View>
+            </LinearGradient>
     )
 }
