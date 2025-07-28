@@ -2,8 +2,9 @@
   "expo": {
     "name": "target",
     "slug": "target",
+    "scheme": "target",
     "version": "1.0.0",
-    "android":{
+    "android": {
       "package": "com.wagner.target",
       "edgeToEdgeEnabled": true,
       "adaptiveIcon": {
@@ -13,8 +14,10 @@
     },
     "ios": {
       "bundleIdentifier": "com.wagner.target",
-      "icon":"./assets/ios-icon.png"
-    }
+      "icon": "./assets/ios-icon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
- 
