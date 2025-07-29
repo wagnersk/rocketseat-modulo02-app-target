@@ -17,6 +17,7 @@ export function Option({
   selectedColor,
   ...rest
 }: Props) {
+    
   return (
     <Pressable
       style={[styles.option, isSelected && { backgroundColor: selectedColor }]}
