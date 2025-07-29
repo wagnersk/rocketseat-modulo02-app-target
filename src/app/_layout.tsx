@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { Stack } from "expo-router"
 import {
     useFonts,
@@ -12,7 +13,6 @@ import { migrate } from "@/database/migrate"
 
 import { colors } from "@/theme/colors"
 import { Loading } from "@/components/Loading"
-import { Suspense } from "react"
 
 
 export default function Layout(){
@@ -23,10 +23,11 @@ export default function Layout(){
     } 
 
     return (
-        <Suspense>
+        <Suspense fallback={<Loading />}>
             <SQLiteProvider
                 databaseName="target.db"
                 onInit={migrate}
+                useSuspense
                 >
                 <Stack
                 screenOptions={{
