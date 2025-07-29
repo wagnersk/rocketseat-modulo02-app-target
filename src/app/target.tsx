@@ -1,9 +1,9 @@
 import {  View } from 'react-native'
 
-import { PageHeader } from './components/PageHeader'
-import { Input } from './components/Input'
-import { Button } from './components/Button'
-import { CurrencyInput } from './components/CurrencyInput'
+import { PageHeader } from '@/components/PageHeader'
+import { Input } from '@/components/Input'
+import { Button } from '@/components/Button'
+import { CurrencyInput } from '@/components/CurrencyInput'
 
 export default function Target() {
   return (

@@ -1,10 +1,10 @@
 import { View ,StatusBar} from "react-native";
 import { router } from "expo-router";
 
-import { HomeHeader } from "./components/HomeHeader";
-import { Target } from "./components/Target";
-import { List } from "./components/List";
-import { Button } from "./components/Button";
+import { HomeHeader } from "@/components/HomeHeader";
+import { Target } from "@/components/Target";
+import { List } from "@/components/List";
+import { Button } from "@/components/Button";
 
 
 
