@@ -22,7 +22,8 @@
     "react-native-currency-input": "^1.1.1",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.11.1",
-    "expo-sqlite": "15.2.10"
+    "expo-sqlite": "15.2.10",
+    "dayjs": "1.11.13"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
