@@ -5,12 +5,23 @@ export type TargetCreate = {
   amount: number
 }
 
+export type TargetResponse = {
+  id:number
+  name: string
+  amount: number
+  current: number
+  percentage:number
+  created_at: Date
+  updated_at: Date
+}
+
 export function useTargetDatabase() {
+    
   const database = useSQLiteContext()
 
   async function create(data: TargetCreate) {
     const statement = await database.prepareAsync(
-      'INSERT INTO targets (name, amount) values ($name, $amount)',
+      "INSERT INTO targets (name, amount) VALUES ($name, $amount)",
     )
 
     statement.executeAsync({
@@ -19,5 +30,20 @@ export function useTargetDatabase() {
     })
   }
 
-  return { create }
+  function listBySavedValue(){
+    return database.getAllAsync<TargetResponse>(`
+       SELECT
+        targets.id,
+        targets.name,
+        targets.amount
+       FROM targets
+
+      `)
+
+  }
+
+  return { 
+    create,
+    listBySavedValue,
+   }
 }

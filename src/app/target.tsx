@@ -39,7 +39,7 @@ export default function Target() {
 
     async function create(){
         try {
-          await targetDatabase.create({name, amount })
+          await targetDatabase.create({ name, amount })
 
           Alert.alert(`Nova meta`, `Meta criada com sucesso!`,[
             {
