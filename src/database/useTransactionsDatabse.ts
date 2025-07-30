@@ -11,7 +11,7 @@ export function useTransactionsDatabase() {
 
     async function create(data:TranscationsCreate) {
         const statement = await database.prepareAsync(`
-            INSERT INTO  transcations
+            INSERT INTO  transactions
                 (target_id, amount, observation)
             VALUES
                 ($target_id, $amount, $observation)
