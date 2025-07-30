@@ -1,7 +1,3 @@
-import { useCallback, useState } from 'react'
-import { Alert, View } from 'react-native'
-import { router, useFocusEffect, useLocalSearchParams } from 'expo-router'
-
 import { Button } from '@/components/Button'
 import { List } from '@/components/List'
 import { Loading } from '@/components/Loading'
@@ -11,6 +7,9 @@ import { Transaction, TransactionProps } from '@/components/Transaction'
 import { useTargetDatabase } from '@/database/useTargetDatabase'
 import { numberToCurrency } from '@/utils/numberToCurrency'
 import { TransactionTypes } from '@/utils/TranstactionTypes'
+import { router, useFocusEffect, useLocalSearchParams } from 'expo-router'
+import { useCallback, useState } from 'react'
+import { Alert, View } from 'react-native'
 
 const transactions: TransactionProps[] = [
   {
@@ -78,7 +77,7 @@ export default function InProgress() {
         title={details.name}
         rightButton={{
           icon: 'edit',
-          onPress: () => {},
+          onPress: () => router.navigate(`/target?id=${params.id}`),
         }}
       />
 
