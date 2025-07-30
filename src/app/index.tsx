@@ -44,6 +44,7 @@ export default function Index() {
     setTargets(targetData)
     setIsFetching(false)
   }
+  
 
   useFocusEffect(
     useCallback(() => {
